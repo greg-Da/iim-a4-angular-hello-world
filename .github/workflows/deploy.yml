@@ -19,9 +19,8 @@ jobs:
         with:
           node-version: '14'
           
-
       - name: "Install dependencies"
-        uses: npm install
+        run: npm install
 
       - name: "Build App"
-        uses: npm run build
+        run: npm run build
