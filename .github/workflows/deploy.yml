@@ -24,3 +24,12 @@ jobs:
 
       - name: "Build App"
         run: npm run build
+
+      - name: "Setup chromedriver"
+        uses: nanasess/setup-chromedriver@master
+        with: 
+          chromedriver-version: '88.0.4324.96'
+      - run: chromedriver --url-base=/wd/hub &
+
+      - name: 'Run test'
+        run: npm run test --no-watch --no-progress
