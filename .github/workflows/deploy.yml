@@ -41,7 +41,7 @@ jobs:
           ruby-version: 2.7
 
       - name: 'Install DPL'
-        uses: gem install dpl
+        run: gem install dpl
 
 
       - name: Deploy to Heroku
